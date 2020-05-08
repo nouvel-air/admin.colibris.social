@@ -11,6 +11,7 @@ import { DeviceList, DeviceIcon } from './resources/devices';
 import { NotificationList, NotificationIcon } from './resources/notifications';
 import ontologies from './config/ontologies';
 import resources from './config/resources';
+import colibrisTheme from './theme';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         mainOntology: 'as'
       })}
       authProvider={authProvider(process.env.REACT_APP_MIDDLEWARE_URL)}
+      theme={colibrisTheme}
       logoutButton={LogoutButton}
     >
       <Resource name="Actor" list={ActorList} show={ActorShow} icon={ActorIcon} options={{ label: 'Acteurs' }} />
