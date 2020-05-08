@@ -8,7 +8,7 @@ const colibrisTheme = createMuiTheme({
     secondary: {
       main: '#bdc900'
     }
-  },
+  }
 });
 
 export default colibrisTheme;
