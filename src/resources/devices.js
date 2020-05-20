@@ -7,7 +7,7 @@ export const DeviceIcon = Icon;
 export const DeviceList = props => {
   useAuthenticated();
   return (
-    <List title="Appareils" {...props}>
+    <List title="Appareils" perPage={25} {...props}>
       <Datagrid>
         <DateField source="semapps:addedAt" label="Ajouté le" />
         <ReferenceField basePath="/Actor" reference="Actor" source="semapps:ownedBy" label="Utilisateur">

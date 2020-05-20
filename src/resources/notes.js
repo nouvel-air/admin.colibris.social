@@ -13,13 +13,14 @@ import {
 import MarkdownInput from 'ra-input-markdown';
 import Icon from '@material-ui/icons/InsertComment';
 import { DateTimeInput, JsonLdReferenceInput, DateField } from '@semapps/react-admin';
+import SearchFilter from "../components/SearchFilter";
 
 export const NoteIcon = Icon;
 
 export const NoteList = props => {
   useAuthenticated();
   return (
-    <List title="Actualités" {...props}>
+    <List title="Actualités" perPage={25} filters={<SearchFilter />} {...props}>
       <Datagrid rowClick="edit">
         <DateField showTime source="published" label="Publié le" />
         <TextField source="name" label="Nom" />

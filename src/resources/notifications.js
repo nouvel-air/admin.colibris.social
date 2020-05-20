@@ -7,7 +7,7 @@ export const NotificationIcon = Icon;
 export const NotificationList = props => {
   useAuthenticated();
   return (
-    <List title="Notifications" {...props}>
+    <List title="Notifications" perPage={25} {...props}>
       <Datagrid>
         <DateField source="semapps:addedAt" label="Envoyée le" />
         <TextField source="semapps:status" label="Statut" />

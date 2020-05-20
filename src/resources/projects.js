@@ -19,13 +19,14 @@ import {
   JsonLdReferenceInput,
   DateTimeInput
 } from '@semapps/react-admin';
+import SearchFilter from "../components/SearchFilter";
 
 export const ProjectIcon = SettingsIcon;
 
 export const ProjectList = props => {
   useAuthenticated();
   return (
-    <List title="Projets La Fabrique" {...props}>
+    <List title="Projets La Fabrique" perPage={25} filters={<SearchFilter />} {...props}>
       <Datagrid rowClick="edit">
         <TextField source="pair:label" label="Nom" />
         <EditButton basePath="/Project" />

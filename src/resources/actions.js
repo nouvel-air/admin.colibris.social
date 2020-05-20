@@ -14,7 +14,10 @@ import {
   TabbedShowLayout,
   Tab,
   ShowButton,
-  NumberInput
+  NumberInput,
+  ImageField,
+  UrlField,
+  RichTextField
 } from 'react-admin';
 import MarkdownInput from 'ra-input-markdown';
 import EcoIcon from '@material-ui/icons/Eco';
@@ -27,13 +30,14 @@ import {
   JsonLdReferenceInput,
   DateTimeInput
 } from '@semapps/react-admin';
+import SearchFilter from "../components/SearchFilter";
 
 export const ActionIcon = EcoIcon;
 
 export const ActionList = props => {
   useAuthenticated();
   return (
-    <List title="Actions" {...props}>
+    <List title="Actions" perPage={25} filters={<SearchFilter />} {...props}>
       <Datagrid rowClick="show">
         <TextField source="pair:label" label="Nom" />
         <ShowButton basePath="/Action" />
@@ -85,6 +89,9 @@ export const ActionShow = props => (
     <TabbedShowLayout>
       <Tab label="Description">
         <TextField source="name" label="Nom" />
+        <UrlField source="pair:aboutPage.id" label="Description" />
+        <ImageField source="image" label="Image" />
+        <RichTextField source="pair:description" label="Description" />
       </Tab>
       <Tab label="Activités émises">
         <ActivitiesList source="outbox">

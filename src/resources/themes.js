@@ -7,7 +7,7 @@ export const ThemeIcon = Icon;
 export const ThemeList = props => {
   useAuthenticated();
   return (
-    <List title="Thèmes" {...props}>
+    <List title="Thèmes" perPage={25} {...props}>
       <Datagrid>
         <TextField source="pair:preferedLabel" label="Nom" />
       </Datagrid>
