@@ -8,13 +8,18 @@ const resources = {
   Activity: {
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'activities'
   },
+  Action: {
+    types: ['as:Group'],
+    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'actors'
+  },
   Project: {
     types: ['pair:Project'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'objects/projects'
+    query: { 'pair:involves': process.env.REACT_APP_MIDDLEWARE_URL + 'actors/lafabrique' },
+    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'objects'
   },
   Note: {
     types: ['as:Note'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'objects/notes'
+    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'objects'
   },
   Theme: {
     types: ['pair:Thema'],

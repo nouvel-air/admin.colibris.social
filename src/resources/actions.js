@@ -17,7 +17,7 @@ import {
   NumberInput
 } from 'react-admin';
 import MarkdownInput from 'ra-input-markdown';
-import SettingsIcon from '@material-ui/icons/Settings';
+import EcoIcon from '@material-ui/icons/Eco';
 import {
   ActivitiesList,
   ActivitiesGrid,
@@ -28,7 +28,7 @@ import {
   DateTimeInput
 } from '@semapps/react-admin';
 
-export const ActionIcon = SettingsIcon;
+export const ActionIcon = EcoIcon;
 
 export const ActionList = props => {
   useAuthenticated();
@@ -36,8 +36,8 @@ export const ActionList = props => {
     <List title="Actions" {...props}>
       <Datagrid rowClick="show">
         <TextField source="pair:label" label="Nom" />
-        <ShowButton basePath="/Project" />
-        <EditButton basePath="/Project" />
+        <ShowButton basePath="/Action" />
+        <EditButton basePath="/Action" />
       </Datagrid>
     </List>
   );
@@ -63,7 +63,7 @@ export const ActionEdit = props => (
       <FormTab label="Liens">
         <JsonLdReferenceInput label="Tags" reference="Tag" source="tag">
           <AutocompleteArrayInput
-            optionText={record => record['pair:preferedLabel'] || record['semapps:label'] || 'Test'}
+            optionText={record => record ? record['pair:preferedLabel'] || record['semapps:label'] : 'Test'}
             fullWidth
           />
         </JsonLdReferenceInput>

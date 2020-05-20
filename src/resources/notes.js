@@ -41,6 +41,7 @@ export const NoteEdit = props => (
       <JsonLdReferenceInput label="Auteur" reference="Project" source="attributedTo">
         <AutocompleteArrayInput optionText={record => (record ? record['pair:label'] : 'Label manquant')} fullWidth />
       </JsonLdReferenceInput>
+      <TextInput source="image" label="Image" fullWidth />
       <DateTimeInput source="published" label="Publié le" fullWidth />
       <DateTimeInput source="updated" label="Mis à jour le" fullWidth />
     </SimpleForm>
