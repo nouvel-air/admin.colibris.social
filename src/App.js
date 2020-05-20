@@ -1,7 +1,6 @@
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
-import { dataProvider, authProvider, httpClient } from '@semapps/react-admin';
-import LogoutButton from './auth/LogoutButton';
+import { dataProvider, httpClient } from '@semapps/react-admin';
 import { ActorList, ActorShow, ActorIcon } from './resources/actors';
 import { ActivityList, ActivityIcon } from './resources/activities';
 import { ActionList, ActionShow, ActionEdit, ActionIcon } from './resources/actions';
@@ -25,10 +24,8 @@ function App() {
         ontologies,
         mainOntology: 'as'
       })}
-      authProvider={authProvider(process.env.REACT_APP_MIDDLEWARE_URL)}
       theme={colibrisTheme}
       layout={ColibrisLayout}
-      logoutButton={LogoutButton}
     >
       <Resource name="Actor" list={ActorList} show={ActorShow} icon={ActorIcon} options={{ label: 'Acteurs' }} />
       <Resource name="Activity" list={ActivityList} icon={ActivityIcon} options={{ label: 'Activités' }} />
