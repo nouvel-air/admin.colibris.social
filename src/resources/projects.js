@@ -15,11 +15,8 @@ import {
 } from 'react-admin';
 import MarkdownInput from 'ra-input-markdown';
 import SettingsIcon from '@material-ui/icons/Settings';
-import {
-  JsonLdReferenceInput,
-  DateTimeInput
-} from '@semapps/react-admin';
-import SearchFilter from "../components/SearchFilter";
+import { JsonLdReferenceInput, DateTimeInput } from '@semapps/react-admin';
+import SearchFilter from '../components/SearchFilter';
 
 export const ProjectIcon = SettingsIcon;
 
@@ -53,7 +50,7 @@ export const ProjectEdit = props => (
       <FormTab label="Liens">
         <JsonLdReferenceInput label="Tags" reference="Tag" source="pair:interestOf">
           <AutocompleteArrayInput
-            optionText={record => record ? record['pair:preferedLabel'] || record['semapps:label'] : 'Test'}
+            optionText={record => (record ? record['pair:preferedLabel'] || record['semapps:label'] : 'Test')}
             fullWidth
           />
         </JsonLdReferenceInput>

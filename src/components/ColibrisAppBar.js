@@ -8,26 +8,21 @@ const useStyles = makeStyles({
     flex: 1,
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    overflow: 'hidden',
+    overflow: 'hidden'
   },
   logo: {
-    maxHeight: 40,
+    maxHeight: 40
   },
   spacer: {
-    flex: 1,
-  },
+    flex: 1
+  }
 });
 
 const ColibrisAppBar = props => {
   const classes = useStyles();
   return (
     <AppBar {...props}>
-      <Typography
-        variant="h6"
-        color="inherit"
-        className={classes.title}
-        id="react-admin-title"
-      />
+      <Typography variant="h6" color="inherit" className={classes.title} id="react-admin-title" />
       <img src="/logo.png" className={classes.logo} />
       <span className={classes.spacer} />
     </AppBar>

@@ -13,7 +13,7 @@ import {
 import MarkdownInput from 'ra-input-markdown';
 import Icon from '@material-ui/icons/InsertComment';
 import { DateTimeInput, JsonLdReferenceInput, DateField } from '@semapps/react-admin';
-import SearchFilter from "../components/SearchFilter";
+import SearchFilter from '../components/SearchFilter';
 
 export const NoteIcon = Icon;
 
