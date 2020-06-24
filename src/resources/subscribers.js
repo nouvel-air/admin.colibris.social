@@ -11,6 +11,11 @@ export const SubscriberList = props => {
       <Datagrid>
         <TextField source="pair:e-mail" label="Adresse e-mail" />
         <TextField source="location.name" label="Localisation" />
+        <SelectField source="location.radius" choices={[
+          { id: '100000.0', name: '100km' },
+          { id: '50000.0', name: '50km' },
+          { id: '25000.0', name: '25km' },
+        ]} label="Distance" />
         <ReferenceArrayField reference="Theme" source="pair:hasInterest" label="Intérêts">
           <SingleFieldList>
             <ChipField source="pair:preferedLabel" />
