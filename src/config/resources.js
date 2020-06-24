@@ -8,6 +8,9 @@ const resources = {
   Activity: {
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'activities'
   },
+  Subscriber: {
+    containerUri: process.env.REACT_APP_MAILER_URL + 'actors'
+  },
   Action: {
     types: ['as:Group'],
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'actors'

@@ -10,7 +10,6 @@ import {
   TextInput,
   useAuthenticated,
   AutocompleteArrayInput,
-  ShowButton,
   NumberInput
 } from 'react-admin';
 import MarkdownInput from 'ra-input-markdown';

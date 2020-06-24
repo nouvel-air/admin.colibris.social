@@ -2,10 +2,10 @@ import React from 'react';
 import { Admin, Resource } from 'react-admin';
 import { dataProvider, httpClient } from '@semapps/react-admin';
 import { ActorList, ActorShow, ActorIcon } from './resources/actors';
-import { ActivityList, ActivityIcon } from './resources/activities';
 import { ActionList, ActionShow, ActionEdit, ActionIcon } from './resources/actions';
 import { ProjectList, ProjectEdit, ProjectIcon } from './resources/projects';
 import { NoteList, NoteEdit, NoteIcon } from './resources/notes';
+import { SubscriberList, SubscriberIcon } from './resources/subscribers';
 import { ThemeList, ThemeIcon } from './resources/themes';
 import { DeviceList, DeviceIcon } from './resources/devices';
 import { NotificationList, NotificationIcon } from './resources/notifications';
@@ -28,7 +28,12 @@ function App() {
       layout={ColibrisLayout}
     >
       <Resource name="Actor" list={ActorList} show={ActorShow} icon={ActorIcon} options={{ label: 'Acteurs' }} />
-      <Resource name="Activity" list={ActivityList} icon={ActivityIcon} options={{ label: 'Activités' }} />
+      <Resource
+        name="Subscriber"
+        list={SubscriberList}
+        icon={SubscriberIcon}
+        options={{ label: 'Abonnés Mailer' }}
+      />
       <Resource
         name="Action"
         list={ActionList}

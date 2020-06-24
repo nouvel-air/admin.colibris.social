@@ -23,7 +23,7 @@ const ColibrisAppBar = props => {
   return (
     <AppBar {...props}>
       <Typography variant="h6" color="inherit" className={classes.title} id="react-admin-title" />
-      <img src="/logo.png" className={classes.logo} />
+      <img src="/logo.png" className={classes.logo} alt="Colibris" />
       <span className={classes.spacer} />
     </AppBar>
   );
