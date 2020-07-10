@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Datagrid, TextField, SelectField, SingleFieldList, ChipField, useAuthenticated, ReferenceArrayField } from 'react-admin';
+import { List, Datagrid, TextField, DateField, SelectField, SingleFieldList, ChipField, useAuthenticated, ReferenceArrayField } from 'react-admin';
 import Icon from '@material-ui/icons/Email';
 
 export const SubscriberIcon = Icon;
@@ -16,6 +16,7 @@ export const SubscriberList = props => {
           { id: '50000.0', name: '50km' },
           { id: '25000.0', name: '25km' },
         ]} label="Distance" />
+        <DateField source="published" label="Inscription" />
         <ReferenceArrayField reference="Theme" source="pair:hasInterest" label="Intérêts">
           <SingleFieldList>
             <ChipField source="pair:preferedLabel" />
