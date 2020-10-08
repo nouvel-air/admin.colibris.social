@@ -17,8 +17,25 @@ const resources = {
   },
   Project: {
     types: ['pair:Project'],
-    query: { 'pair:involves': process.env.REACT_APP_MIDDLEWARE_URL + 'actors/lafabrique' },
+    query: {
+      'pair:involves': process.env.REACT_APP_MIDDLEWARE_URL + 'actors/lafabrique'
+    },
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'objects'
+  },
+  Oasis: {
+    types: ['pair:Project'],
+    query: {
+      'pair:involves': process.env.REACT_APP_MIDDLEWARE_URL + 'actors/lafabrique',
+      'pair:interestOf': process.env.REACT_APP_MIDDLEWARE_URL + 'themes/oasis'
+    },
+    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'objects'
+  },
+  HostingService: {
+    types: ['oasis:HostingService'],
+    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'hosting-services'
+  },
+  HostingServiceType: {
+    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'hosting-services-types'
   },
   Note: {
     types: ['as:Note'],

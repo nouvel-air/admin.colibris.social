@@ -1,41 +1,13 @@
 import React from 'react';
-import {
-  List,
-  Datagrid,
-  Edit,
-  TabbedForm,
-  FormTab,
-  TextField,
-  EditButton,
-  TextInput,
-  useAuthenticated,
-  AutocompleteArrayInput,
-  NumberInput
-} from 'react-admin';
+import { Edit, TabbedForm, FormTab, TextInput, AutocompleteArrayInput, NumberInput } from 'react-admin';
 import MarkdownInput from 'ra-input-markdown';
-import SettingsIcon from '@material-ui/icons/Settings';
 import { JsonLdReferenceInput, DateTimeInput } from '@semapps/react-admin';
-import SearchFilter from '../components/SearchFilter';
-
-export const ProjectIcon = SettingsIcon;
-
-export const ProjectList = props => {
-  useAuthenticated();
-  return (
-    <List title="Projets La Fabrique" perPage={25} filters={<SearchFilter />} {...props}>
-      <Datagrid rowClick="edit">
-        <TextField source="pair:label" label="Nom" />
-        <EditButton basePath="/Project" />
-      </Datagrid>
-    </List>
-  );
-};
 
 const ProjectTitle = ({ record }) => {
   return <span>Projet {record ? `"${record['pair:label']}"` : ''}</span>;
 };
 
-export const ProjectEdit = props => (
+const ProjectEdit = props => (
   <Edit title={<ProjectTitle />} {...props}>
     <TabbedForm>
       <FormTab label="Général">
@@ -56,6 +28,12 @@ export const ProjectEdit = props => (
         <JsonLdReferenceInput label="Soutenu par" reference="Actor" source="pair:involves">
           <AutocompleteArrayInput optionText={record => record.name} fullWidth />
         </JsonLdReferenceInput>
+        <JsonLdReferenceInput label="Offre" reference="HostingService" source="pair:offers">
+          <AutocompleteArrayInput
+            optionText={record => (record['pair:description'] ? record['pair:description'].substring(0, 50) : '')}
+            fullWidth
+          />
+        </JsonLdReferenceInput>
       </FormTab>
       <FormTab label="Localisation">
         <TextInput source="location.name" label="Nom" fullWidth />
@@ -65,3 +43,5 @@ export const ProjectEdit = props => (
     </TabbedForm>
   </Edit>
 );
+
+export default ProjectEdit;

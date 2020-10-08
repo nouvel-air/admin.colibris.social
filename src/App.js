@@ -1,14 +1,19 @@
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
+import polyglotI18nProvider from 'ra-i18n-polyglot';
+import frenchMessages from 'ra-language-french';
 import { dataProvider, httpClient } from '@semapps/react-admin';
+
 import { ActorList, ActorShow, ActorIcon } from './resources/actors';
 import { ActionList, ActionShow, ActionEdit, ActionIcon } from './resources/actions';
-import { ProjectList, ProjectEdit, ProjectIcon } from './resources/projects';
 import { NoteList, NoteEdit, NoteIcon } from './resources/notes';
 import { SubscriberList, SubscriberIcon } from './resources/subscribers';
 import { ThemeList, ThemeIcon } from './resources/themes';
 import { DeviceList, DeviceIcon } from './resources/devices';
 import { NotificationList, NotificationIcon } from './resources/notifications';
+import project from './resources/Project';
+import hostingService from './resources/HostingService';
+
 import ontologies from './config/ontologies';
 import resources from './config/resources';
 import ColibrisLayout from './components/ColibrisLayout';
@@ -22,18 +27,14 @@ function App() {
         httpClient,
         resources,
         ontologies,
-        mainOntology: 'as'
+        mainOntology: 'pair'
       })}
+      i18nProvider={polyglotI18nProvider(() => frenchMessages)}
       theme={colibrisTheme}
       layout={ColibrisLayout}
     >
       <Resource name="Actor" list={ActorList} show={ActorShow} icon={ActorIcon} options={{ label: 'Acteurs' }} />
-      <Resource
-        name="Subscriber"
-        list={SubscriberList}
-        icon={SubscriberIcon}
-        options={{ label: 'Abonnés Mailer' }}
-      />
+      <Resource name="Subscriber" list={SubscriberList} icon={SubscriberIcon} options={{ label: 'Abonnés Mailer' }} />
       <Resource
         name="Action"
         list={ActionList}
@@ -42,13 +43,9 @@ function App() {
         icon={ActionIcon}
         options={{ label: 'Actions citoyennes' }}
       />
-      <Resource
-        name="Project"
-        list={ProjectList}
-        edit={ProjectEdit}
-        icon={ProjectIcon}
-        options={{ label: 'Projets La Fabrique' }}
-      />
+      <Resource name="Project" {...project} />
+      <Resource name="HostingService" {...hostingService} />
+      <Resource name="HostingServiceType" />
       <Resource name="Note" list={NoteList} edit={NoteEdit} icon={NoteIcon} options={{ label: 'Actualités' }} />
       <Resource name="Theme" list={ThemeList} icon={ThemeIcon} options={{ label: 'Thèmes' }} />
       <Resource name="Device" list={DeviceList} icon={DeviceIcon} options={{ label: 'Appareils' }} />

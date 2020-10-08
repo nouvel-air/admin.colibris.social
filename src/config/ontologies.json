@@ -28,7 +28,8 @@
   {
     "prefix": "pair",
     "owl": "",
-    "url": "http://virtual-assembly.org/ontologies/pair#"
+    "url": "http://virtual-assembly.org/ontologies/pair#",
+    "context": "https://colibris.social/context.json"
   },
   {
     "prefix": "pairv1",
@@ -44,5 +45,10 @@
     "prefix": "semapps",
     "owl": "",
     "url": "http://semapps.org/ns/core#"
+  },
+  {
+    "prefix": "oasis",
+    "owl": "",
+    "url": "http://cooperative-oasis.org/ns/core#"
   }
 ]
