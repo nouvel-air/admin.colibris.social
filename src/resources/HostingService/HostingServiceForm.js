@@ -2,7 +2,7 @@ import React from 'react';
 import { AutocompleteArrayInput, AutocompleteInput,  NumberInput, ReferenceInput, SimpleForm, TextInput } from "react-admin";
 import { makeStyles } from "@material-ui/core/styles";
 import MarkdownInput from 'ra-input-markdown';
-import UriArrayInput from "../../components/UriArrayInput";
+import { UriArrayInput } from '@semapps/semantic-data-provider';
 
 const useStyles = makeStyles({
   inlineBlock: { display: 'inline-flex', marginRight: '1rem' }

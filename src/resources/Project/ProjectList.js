@@ -2,7 +2,7 @@ import React from 'react';
 import { List, Datagrid, TextField, EditButton, useAuthenticated, SingleFieldList, ChipField } from 'react-admin';
 
 import SearchFilter from '../../components/SearchFilter';
-import UriArrayField from "../../components/UriArrayField";
+import { UriArrayField } from '@semapps/semantic-data-provider';
 
 const ProjectList = props => {
   useAuthenticated();

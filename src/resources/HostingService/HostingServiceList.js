@@ -10,7 +10,7 @@ import {
   ChipField
 } from 'react-admin';
 import { makeStyles } from '@material-ui/core/styles';
-import UriArrayField from '../../components/UriArrayField';
+import { UriArrayField } from '@semapps/semantic-data-provider';
 
 const useStyles = makeStyles({
   max3Lines: {

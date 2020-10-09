@@ -1,7 +1,8 @@
 import React from 'react';
 import { Edit, TabbedForm, FormTab, TextInput, AutocompleteArrayInput, NumberInput } from 'react-admin';
 import MarkdownInput from 'ra-input-markdown';
-import { JsonLdReferenceInput, DateTimeInput } from '@semapps/react-admin';
+import { DateTimeInput } from '@semapps/react-admin';
+import { UriArrayInput } from '@semapps/semantic-data-provider';
 
 const ProjectTitle = ({ record }) => {
   return <span>Projet {record ? `"${record['pair:label']}"` : ''}</span>;
@@ -19,21 +20,21 @@ const ProjectEdit = props => (
         <DateTimeInput source="updated" label="Mis à jour le" fullWidth />
       </FormTab>
       <FormTab label="Liens">
-        <JsonLdReferenceInput label="Tags" reference="Tag" source="pair:interestOf">
+        <UriArrayInput label="Tags" reference="Tag" source="pair:interestOf">
           <AutocompleteArrayInput
             optionText={record => (record ? record['pair:preferedLabel'] || record['semapps:label'] : 'Test')}
             fullWidth
           />
-        </JsonLdReferenceInput>
-        <JsonLdReferenceInput label="Soutenu par" reference="Actor" source="pair:involves">
+        </UriArrayInput>
+        <UriArrayInput label="Soutenu par" reference="Actor" source="pair:involves">
           <AutocompleteArrayInput optionText={record => record.name} fullWidth />
-        </JsonLdReferenceInput>
-        <JsonLdReferenceInput label="Offre" reference="HostingService" source="pair:offers">
+        </UriArrayInput>
+        <UriArrayInput label="Offre" reference="HostingService" source="pair:offers">
           <AutocompleteArrayInput
             optionText={record => (record['pair:description'] ? record['pair:description'].substring(0, 50) : '')}
             fullWidth
           />
-        </JsonLdReferenceInput>
+        </UriArrayInput>
       </FormTab>
       <FormTab label="Localisation">
         <TextInput source="location.name" label="Nom" fullWidth />

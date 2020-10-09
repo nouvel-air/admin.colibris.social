@@ -12,7 +12,8 @@ import {
 } from 'react-admin';
 import MarkdownInput from 'ra-input-markdown';
 import Icon from '@material-ui/icons/InsertComment';
-import { DateTimeInput, JsonLdReferenceInput, DateField } from '@semapps/react-admin';
+import { DateTimeInput, DateField } from '@semapps/react-admin';
+import { UriArrayInput } from '@semapps/semantic-data-provider';
 import SearchFilter from '../components/SearchFilter';
 
 export const NoteIcon = Icon;
@@ -39,9 +40,9 @@ export const NoteEdit = props => (
     <SimpleForm>
       <TextInput source="name" label="Nom" fullWidth />
       <MarkdownInput source="content" label="Description" fullWidth />
-      <JsonLdReferenceInput label="Auteur" reference="Project" source="attributedTo">
+      <UriArrayInput label="Auteur" reference="Project" source="attributedTo">
         <AutocompleteArrayInput optionText={record => (record ? record['pair:label'] : 'Label manquant')} fullWidth />
-      </JsonLdReferenceInput>
+      </UriArrayInput>
       <TextInput source="image" label="Image" fullWidth />
       <DateTimeInput source="published" label="Publié le" fullWidth />
       <DateTimeInput source="updated" label="Mis à jour le" fullWidth />

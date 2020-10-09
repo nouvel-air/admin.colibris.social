@@ -2,7 +2,7 @@ import React from 'react';
 import { Admin, Resource } from 'react-admin';
 import polyglotI18nProvider from 'ra-i18n-polyglot';
 import frenchMessages from 'ra-language-french';
-import { dataProvider, httpClient } from '@semapps/react-admin';
+import { dataProvider, httpClient } from '@semapps/semantic-data-provider';
 
 import { ActorList, ActorShow, ActorIcon } from './resources/actors';
 import { ActionList, ActionShow, ActionEdit, ActionIcon } from './resources/actions';
