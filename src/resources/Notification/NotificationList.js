@@ -1,10 +1,7 @@
 import React from 'react';
 import { List, Datagrid, TextField, DateField, useAuthenticated, ReferenceField } from 'react-admin';
-import Icon from '@material-ui/icons/Notifications';
 
-export const NotificationIcon = Icon;
-
-export const NotificationList = props => {
+const NotificationList = props => {
   useAuthenticated();
   return (
     <List title="Notifications" perPage={25} {...props}>
@@ -19,3 +16,5 @@ export const NotificationList = props => {
     </List>
   );
 };
+
+export default NotificationList;

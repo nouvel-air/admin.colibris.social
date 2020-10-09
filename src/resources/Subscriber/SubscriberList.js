@@ -10,11 +10,8 @@ import {
   useAuthenticated,
   ReferenceArrayField
 } from 'react-admin';
-import Icon from '@material-ui/icons/Email';
 
-export const SubscriberIcon = Icon;
-
-export const SubscriberList = props => {
+const SubscriberList = props => {
   useAuthenticated();
   return (
     <List title="Abonnés Mailer" perPage={25} {...props}>
@@ -48,3 +45,5 @@ export const SubscriberList = props => {
     </List>
   );
 };
+
+export default SubscriberList;

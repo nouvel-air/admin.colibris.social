@@ -1,10 +1,7 @@
 import React from 'react';
 import { List, Datagrid, TextField, DateField, useAuthenticated, ReferenceField } from 'react-admin';
-import Icon from '@material-ui/icons/PhonelinkRing';
 
-export const DeviceIcon = Icon;
-
-export const DeviceList = props => {
+const DeviceList = props => {
   useAuthenticated();
   return (
     <List title="Appareils" perPage={25} {...props}>
@@ -20,3 +17,5 @@ export const DeviceList = props => {
     </List>
   );
 };
+
+export default DeviceList;

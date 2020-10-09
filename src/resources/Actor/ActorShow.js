@@ -1,29 +1,12 @@
 import React from 'react';
-import { List, Datagrid, TextField, useAuthenticated, ShowButton, Show, TabbedShowLayout, Tab } from 'react-admin';
-import Icon from '@material-ui/icons/Person';
+import { TextField, Show, TabbedShowLayout, Tab } from 'react-admin';
 import { ActivitiesList, ActivitiesGrid, CollectionList, ActorsGrid } from '@semapps/react-admin';
-import SearchFilter from '../components/SearchFilter';
-
-export const ActorIcon = Icon;
 
 const ActorTitle = ({ record }) => {
   return <span>Acteur {record ? `"${record.preferredUsername}"` : ''}</span>;
 };
 
-export const ActorList = props => {
-  useAuthenticated();
-  return (
-    <List title="Acteurs" perPage={25} filters={<SearchFilter />} {...props}>
-      <Datagrid rowClick="show">
-        <TextField source="name" label="Nom" />
-        <TextField source="preferredUsername" label="Username" />
-        <ShowButton basePath="/Actor" />
-      </Datagrid>
-    </List>
-  );
-};
-
-export const ActorShow = props => (
+const ActorShow = props => (
   <Show title={<ActorTitle />} {...props}>
     <TabbedShowLayout>
       <Tab label="Profil">
@@ -53,3 +36,5 @@ export const ActorShow = props => (
     </TabbedShowLayout>
   </Show>
 );
+
+export default ActorShow;

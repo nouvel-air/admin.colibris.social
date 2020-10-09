@@ -1,8 +1,7 @@
 import React from 'react';
-import { List, Datagrid, TextField, EditButton, useAuthenticated, SingleFieldList, ChipField } from 'react-admin';
+import { List, Datagrid, TextField, EditButton, useAuthenticated } from 'react-admin';
 
 import SearchFilter from '../../components/SearchFilter';
-import { UriArrayField } from '@semapps/semantic-data-provider';
 
 const ProjectList = props => {
   useAuthenticated();
@@ -10,11 +9,6 @@ const ProjectList = props => {
     <List title="Projets La Fabrique" perPage={25} filters={<SearchFilter />} {...props}>
       <Datagrid rowClick="edit">
         <TextField source="pair:label" label="Nom" />
-        <UriArrayField reference="Tag" source="pair:interestOf" label="Tags">
-          <SingleFieldList>
-            <ChipField source="pair:preferedLabel" />
-          </SingleFieldList>
-        </UriArrayField>
         <EditButton basePath="/Project" />
       </Datagrid>
     </List>
