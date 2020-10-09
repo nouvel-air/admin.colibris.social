@@ -22,7 +22,7 @@ const HostingServiceForm = props => {
       <NumberInput source="oasis:minCapacity" label="Capacité minimale" formClassName={classes.inlineBlock} />
       <NumberInput source="oasis:maxCapacity" label="Capacité maximale" formClassName={classes.inlineBlock} />
       <TextInput source="oasis:price" label="Prix" fullWidth />
-      <TextInput source="oasis:bookingUrl" label="Lien d'inscription" fullWidth />
+      <TextInput source="oasis:bookingUrl" label="Lien d'inscription" fullWidth helperText="Pour une inscription par email: mailto:adresse@domain.com"/>
     </SimpleForm>
   );
 };
