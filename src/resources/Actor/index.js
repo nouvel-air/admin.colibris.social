@@ -1,5 +1,5 @@
-import ActorList from "./ActorList";
-import ActorShow from "./ActorShow";
+import ActorList from './ActorList';
+import ActorShow from './ActorShow';
 import PersonIcon from '@material-ui/icons/Person';
 
 export default {
@@ -9,4 +9,4 @@ export default {
   options: {
     label: 'Acteurs'
   }
-}
+};

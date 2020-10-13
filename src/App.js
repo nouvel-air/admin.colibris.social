@@ -27,7 +27,7 @@ function App() {
         httpClient,
         resources,
         ontologies,
-        mainOntology: 'pair'
+        jsonContext: process.env.REACT_APP_BASE_URL + 'context.json'
       })}
       i18nProvider={polyglotI18nProvider(() => frenchMessages)}
       theme={colibrisTheme}
@@ -44,6 +44,7 @@ function App() {
       <Resource name="Notification" {...notification} />
       {/* Resources not displayed */}
       <Resource name="Tag" />
+      <Resource name="Oasis" />
       <Resource name="HostingServiceType" />
     </Admin>
   );

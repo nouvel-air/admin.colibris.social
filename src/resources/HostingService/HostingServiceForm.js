@@ -1,6 +1,13 @@
 import React from 'react';
-import { AutocompleteArrayInput, AutocompleteInput,  NumberInput, ReferenceInput, SimpleForm, TextInput } from "react-admin";
-import { makeStyles } from "@material-ui/core/styles";
+import {
+  AutocompleteArrayInput,
+  AutocompleteInput,
+  NumberInput,
+  ReferenceInput,
+  SimpleForm,
+  TextInput
+} from 'react-admin';
+import { makeStyles } from '@material-ui/core/styles';
 import MarkdownInput from 'ra-input-markdown';
 import { UriArrayInput } from '@semapps/semantic-data-provider';
 
@@ -10,10 +17,11 @@ const useStyles = makeStyles({
 
 const HostingServiceForm = props => {
   const classes = useStyles();
-  return(
+  return (
     <SimpleForm initialValues={{ 'oasis:minCapacity': 1 }} {...props}>
-      <ReferenceInput label="Oasis" reference="Project" source="pair:offeredBy" fullWidth>
-        <AutocompleteInput optionText="pair:label" shouldRenderSuggestions={value => value.length > 1} fullWidth />
+      <TextInput source="pair:label" label="Titre de l'annonce" fullWidth />
+      <ReferenceInput label="Oasis" reference="Oasis" source="pair:offeredBy" fullWidth perPage={250}>
+        <AutocompleteInput optionText="pair:label" fullWidth />
       </ReferenceInput>
       <MarkdownInput multiline source="pair:description" label="Description" fullWidth />
       <UriArrayInput label="Catégories" reference="HostingServiceType" source="pair:hasType">
@@ -22,7 +30,12 @@ const HostingServiceForm = props => {
       <NumberInput source="oasis:minCapacity" label="Capacité minimale" formClassName={classes.inlineBlock} />
       <NumberInput source="oasis:maxCapacity" label="Capacité maximale" formClassName={classes.inlineBlock} />
       <TextInput source="oasis:price" label="Prix" fullWidth />
-      <TextInput source="oasis:bookingUrl" label="Lien d'inscription" fullWidth helperText="Pour une inscription par email: mailto:adresse@domain.com"/>
+      <TextInput
+        source="oasis:bookingUrl"
+        label="Lien d'inscription"
+        fullWidth
+        helperText="Pour une inscription par email: mailto:adresse@domain.com"
+      />
     </SimpleForm>
   );
 };

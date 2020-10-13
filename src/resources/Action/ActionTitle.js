@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const ActionTitle = ({ record }) => {
   return <span>Action {record ? `"${record['pair:label']}"` : ''}</span>;

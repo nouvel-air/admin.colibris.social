@@ -1,4 +1,4 @@
-import NotificationList from "./NotificationList";
+import NotificationList from './NotificationList';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
 export default {
@@ -7,4 +7,4 @@ export default {
   options: {
     label: 'Notifications'
   }
-}
+};

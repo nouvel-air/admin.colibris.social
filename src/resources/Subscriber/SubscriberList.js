@@ -7,9 +7,9 @@ import {
   SelectField,
   SingleFieldList,
   ChipField,
-  useAuthenticated,
-  ReferenceArrayField
+  useAuthenticated
 } from 'react-admin';
+import { UriArrayField } from '@semapps/semantic-data-provider';
 
 const SubscriberList = props => {
   useAuthenticated();
@@ -28,11 +28,11 @@ const SubscriberList = props => {
           label="Distance"
         />
         <DateField source="published" label="Inscription" />
-        <ReferenceArrayField reference="Theme" source="pair:hasInterest" label="Intérêts">
+        <UriArrayField reference="Theme" source="pair:hasInterest" label="Intérêts">
           <SingleFieldList>
             <ChipField source="pair:preferedLabel" />
           </SingleFieldList>
-        </ReferenceArrayField>
+        </UriArrayField>
         <SelectField
           source="semapps:mailFrequency"
           choices={[

@@ -30,10 +30,7 @@ const ProjectEdit = props => (
           <AutocompleteArrayInput optionText={record => record.name} fullWidth />
         </UriArrayInput>
         <UriArrayInput label="Offre" reference="HostingService" source="pair:offers">
-          <AutocompleteArrayInput
-            optionText={record => (record['pair:description'] ? record['pair:description'].substring(0, 50) : '')}
-            fullWidth
-          />
+          <AutocompleteArrayInput optionText={record => record['pair:label']} fullWidth />
         </UriArrayInput>
       </FormTab>
       <FormTab label="Localisation">

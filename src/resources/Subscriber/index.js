@@ -1,4 +1,4 @@
-import SubscriberList from "./SubscriberList";
+import SubscriberList from './SubscriberList';
 import EmailIcon from '@material-ui/icons/Email';
 
 export default {
@@ -7,4 +7,4 @@ export default {
   options: {
     label: 'Abonnés Mailer'
   }
-}
+};

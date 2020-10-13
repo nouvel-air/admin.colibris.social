@@ -1,20 +1,7 @@
 import React from 'react';
-import {
-  TextField,
-  Show,
-  TabbedShowLayout,
-  Tab,
-  ImageField,
-  UrlField,
-  RichTextField
-} from 'react-admin';
-import {
-  ActivitiesList,
-  ActivitiesGrid,
-  CollectionList,
-  ActorsGrid,
-} from '@semapps/react-admin';
-import ActionTitle from "./ActionTitle";
+import { TextField, Show, TabbedShowLayout, Tab, ImageField, UrlField, RichTextField } from 'react-admin';
+import { ActivitiesList, ActivitiesGrid, CollectionList, ActorsGrid } from '@semapps/react-admin';
+import ActionTitle from './ActionTitle';
 
 const ActionShow = props => (
   <Show title={<ActionTitle />} {...props}>

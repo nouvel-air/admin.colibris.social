@@ -1,4 +1,4 @@
-import ThemeList from "./ThemeList";
+import ThemeList from './ThemeList';
 import ToysIcon from '@material-ui/icons/Toys';
 
 export default {
@@ -7,4 +7,4 @@ export default {
   options: {
     label: 'Thèmes'
   }
-}
+};

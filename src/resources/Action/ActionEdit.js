@@ -1,16 +1,9 @@
 import React from 'react';
-import {
-  Edit,
-  TabbedForm,
-  FormTab,
-  TextInput,
-  AutocompleteArrayInput,
-  NumberInput
-} from 'react-admin';
+import { Edit, TabbedForm, FormTab, TextInput, AutocompleteArrayInput, NumberInput } from 'react-admin';
 import MarkdownInput from 'ra-input-markdown';
 import { copyValues, DateTimeInput } from '@semapps/react-admin';
 import { UriArrayInput } from '@semapps/semantic-data-provider';
-import ActionTitle from "./ActionTitle";
+import ActionTitle from './ActionTitle';
 
 const decorators = [copyValues({ name: 'pair:label', content: 'pair:description', url: 'pair:homePage' })];
 

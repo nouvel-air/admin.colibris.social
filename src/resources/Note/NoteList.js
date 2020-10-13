@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  List,
-  Datagrid,
-  TextField,
-  EditButton,
-  useAuthenticated,
-} from 'react-admin';
-import { DateField } from '@semapps/react-admin';
+import { List, Datagrid, TextField, EditButton, useAuthenticated, DateField } from 'react-admin';
 import SearchFilter from '../../components/SearchFilter';
 
 const NoteList = props => {

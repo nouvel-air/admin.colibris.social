@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Edit,
-  SimpleForm,
-  TextInput,
-  AutocompleteArrayInput
-} from 'react-admin';
+import { Edit, SimpleForm, TextInput, AutocompleteArrayInput } from 'react-admin';
 import MarkdownInput from 'ra-input-markdown';
 import { DateTimeInput } from '@semapps/react-admin';
 import { UriArrayInput } from '@semapps/semantic-data-provider';
