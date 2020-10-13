@@ -27,7 +27,7 @@ function App() {
         httpClient,
         resources,
         ontologies,
-        jsonContext: process.env.REACT_APP_BASE_URL + 'context.json'
+        jsonContext: window.location.origin + '/context.json',
       })}
       i18nProvider={polyglotI18nProvider(() => frenchMessages)}
       theme={colibrisTheme}
