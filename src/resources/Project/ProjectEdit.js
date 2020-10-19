@@ -34,7 +34,11 @@ const ProjectEdit = props => (
         </UriArrayInput>
       </FormTab>
       <FormTab label="Localisation">
-        <TextInput source="location.name" label="Nom" fullWidth />
+        <TextInput source="location[schema:address][schema:streetAddress]" label="Adresse" fullWidth />
+        <NumberInput source="location[schema:address][schema:postalCode]" label="Code postal" fullWidth />
+        <TextInput source="location[schema:address][schema:addressLocality]" label="Ville" fullWidth />
+        <TextInput source="location[schema:address][schema:addressRegion]" label="Région" fullWidth />
+        <TextInput source="location[schema:address][schema:addressCountry]" label="Code pays" fullWidth />
         <NumberInput source="location.latitude" label="Latitude" fullWidth />
         <NumberInput source="location.longitude" label="Longitude" fullWidth />
       </FormTab>
