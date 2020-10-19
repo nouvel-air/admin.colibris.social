@@ -25,7 +25,7 @@ function App() {
     httpClient,
     resources,
     ontologies,
-    jsonContext: window.location.origin + '/context.json',
+    jsonContext: process.env.REACT_APP_MIDDLEWARE_URL + 'context.json',
     uploadsContainerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'files'
   };
 
