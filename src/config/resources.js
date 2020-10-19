@@ -51,7 +51,7 @@ const resources = {
     types: ['pair:Project'],
     query: {
       'pair:involves': process.env.REACT_APP_MIDDLEWARE_URL + 'actors/lafabrique',
-      'as:tag': process.env.REACT_APP_MIDDLEWARE_URL + 'themes/oasis'
+      'pair:interestOf': process.env.REACT_APP_MIDDLEWARE_URL + 'themes/oasis'
     }
   }
 };
