@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  List,
-  Datagrid,
-  EditButton,
-  TextField,
-  ReferenceField,
-  SingleFieldList,
-  ChipField
-} from 'react-admin';
+import { List, Datagrid, EditButton, TextField, ReferenceField, SingleFieldList, ChipField } from 'react-admin';
 import { UriArrayField } from '@semapps/semantic-data-provider';
 
 export const HostingServiceList = props => (

@@ -5,11 +5,12 @@ import {
   NumberInput,
   ReferenceInput,
   SimpleForm,
-  TextInput
+  TextInput,
+  ImageInput
 } from 'react-admin';
 import { makeStyles } from '@material-ui/core/styles';
 import MarkdownInput from 'ra-input-markdown';
-import { UriArrayInput } from '@semapps/semantic-data-provider';
+import { ImageField, UriArrayInput } from '@semapps/semantic-data-provider';
 
 const useStyles = makeStyles({
   inlineBlock: { display: 'inline-flex', marginRight: '1rem' }
@@ -24,6 +25,9 @@ const HostingServiceForm = props => {
         <AutocompleteInput optionText="pair:label" fullWidth />
       </ReferenceInput>
       <MarkdownInput multiline source="pair:description" label="Description" fullWidth />
+      <ImageInput source="oasis:image" label="Photos" accept="image/*" multiple>
+        <ImageField source="src" />
+      </ImageInput>
       <UriArrayInput label="Catégories" reference="HostingServiceType" source="pair:hasType">
         <AutocompleteArrayInput optionText="pair:label" fullWidth />
       </UriArrayInput>

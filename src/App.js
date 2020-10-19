@@ -20,15 +20,18 @@ import ColibrisLayout from './components/ColibrisLayout';
 import colibrisTheme from './theme';
 
 function App() {
+  const dataProviderConfig = {
+    sparqlEndpoint: process.env.REACT_APP_MIDDLEWARE_URL + 'sparql',
+    httpClient,
+    resources,
+    ontologies,
+    jsonContext: window.location.origin + '/context.json',
+    uploadsContainerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'files'
+  };
+
   return (
     <Admin
-      dataProvider={dataProvider({
-        sparqlEndpoint: process.env.REACT_APP_MIDDLEWARE_URL + 'sparql',
-        httpClient,
-        resources,
-        ontologies,
-        jsonContext: window.location.origin + '/context.json',
-      })}
+      dataProvider={dataProvider(dataProviderConfig)}
       i18nProvider={polyglotI18nProvider(() => frenchMessages)}
       theme={colibrisTheme}
       layout={ColibrisLayout}

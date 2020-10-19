@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  List,
-  Datagrid,
-  TextField,
-  DateField,
-  SelectField,
-  SingleFieldList,
-  ChipField
-} from 'react-admin';
+import { List, Datagrid, TextField, DateField, SelectField, SingleFieldList, ChipField } from 'react-admin';
 import { UriArrayField } from '@semapps/semantic-data-provider';
 
 const SubscriberList = props => (
