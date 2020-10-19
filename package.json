@@ -1,11 +1,11 @@
 {
   "name": "admin.colibris.social",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "private": true,
   "dependencies": {
-    "@semapps/archipelago-layout": "0.1.7",
-    "@semapps/react-admin": "0.1.7",
-    "@semapps/semantic-data-provider": "0.1.7",
+    "@semapps/archipelago-layout": "0.1.8",
+    "@semapps/react-admin": "0.1.8",
+    "@semapps/semantic-data-provider": "0.1.8",
     "jwt-decode": "^2.2.0",
     "ra-input-markdown": "^1.1.5",
     "ra-language-french": "^3.9.2",
