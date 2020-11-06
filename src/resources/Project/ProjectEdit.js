@@ -1,41 +1,14 @@
 import React from 'react';
-import {
-  List,
-  Datagrid,
-  Edit,
-  TabbedForm,
-  FormTab,
-  TextField,
-  EditButton,
-  TextInput,
-  useAuthenticated,
-  AutocompleteArrayInput,
-  NumberInput
-} from 'react-admin';
+import { Edit, TabbedForm, FormTab, TextInput, AutocompleteArrayInput, NumberInput } from 'react-admin';
 import MarkdownInput from 'ra-input-markdown';
-import SettingsIcon from '@material-ui/icons/Settings';
-import { JsonLdReferenceInput, DateTimeInput } from '@semapps/react-admin';
-import SearchFilter from '../components/SearchFilter';
-
-export const ProjectIcon = SettingsIcon;
-
-export const ProjectList = props => {
-  useAuthenticated();
-  return (
-    <List title="Projets La Fabrique" perPage={25} filters={<SearchFilter />} {...props}>
-      <Datagrid rowClick="edit">
-        <TextField source="pair:label" label="Nom" />
-        <EditButton basePath="/Project" />
-      </Datagrid>
-    </List>
-  );
-};
+import { DateTimeInput } from '@semapps/react-admin';
+import { UriArrayInput } from '@semapps/semantic-data-provider';
 
 const ProjectTitle = ({ record }) => {
   return <span>Projet {record ? `"${record['pair:label']}"` : ''}</span>;
 };
 
-export const ProjectEdit = props => (
+const ProjectEdit = props => (
   <Edit title={<ProjectTitle />} {...props}>
     <TabbedForm>
       <FormTab label="Général">
@@ -47,21 +20,30 @@ export const ProjectEdit = props => (
         <DateTimeInput source="updated" label="Mis à jour le" fullWidth />
       </FormTab>
       <FormTab label="Liens">
-        <JsonLdReferenceInput label="Tags" reference="Tag" source="pair:interestOf">
+        <UriArrayInput label="Tags" reference="Tag" source="pair:interestOf">
           <AutocompleteArrayInput
             optionText={record => (record ? record['pair:preferedLabel'] || record['semapps:label'] : 'Test')}
             fullWidth
           />
-        </JsonLdReferenceInput>
-        <JsonLdReferenceInput label="Soutenu par" reference="Actor" source="pair:involves">
+        </UriArrayInput>
+        <UriArrayInput label="Soutenu par" reference="Actor" source="pair:involves">
           <AutocompleteArrayInput optionText={record => record.name} fullWidth />
-        </JsonLdReferenceInput>
+        </UriArrayInput>
+        <UriArrayInput label="Offre" reference="HostingService" source="pair:offers">
+          <AutocompleteArrayInput optionText={record => record['pair:label']} fullWidth />
+        </UriArrayInput>
       </FormTab>
       <FormTab label="Localisation">
-        <TextInput source="location.name" label="Nom" fullWidth />
+        <TextInput source="location[schema:address][schema:streetAddress]" label="Adresse" fullWidth />
+        <NumberInput source="location[schema:address][schema:postalCode]" label="Code postal" fullWidth />
+        <TextInput source="location[schema:address][schema:addressLocality]" label="Ville" fullWidth />
+        <TextInput source="location[schema:address][schema:addressRegion]" label="Région" fullWidth />
+        <TextInput source="location[schema:address][schema:addressCountry]" label="Code pays" fullWidth />
         <NumberInput source="location.latitude" label="Latitude" fullWidth />
         <NumberInput source="location.longitude" label="Longitude" fullWidth />
       </FormTab>
     </TabbedForm>
   </Edit>
 );
+
+export default ProjectEdit;
