@@ -3,7 +3,7 @@ import { Filter, TextInput } from 'react-admin';
 
 const SearchFilter = props => (
   <Filter {...props}>
-    <TextInput label="Search" source="q" alwaysOn />
+    <TextInput label="Rechercher" source="q" alwaysOn />
   </Filter>
 );
 
