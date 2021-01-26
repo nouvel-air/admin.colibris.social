@@ -9,9 +9,9 @@ export default {
   },
   dataModel: {
     types: ['pair:Project'],
-    query: {
-      'pair:involves': process.env.REACT_APP_MIDDLEWARE_URL + 'services/lafabrique',
-      'pair:interestOf': process.env.REACT_APP_MIDDLEWARE_URL + 'themes/oasis'
+    filter: {
+      'pair:supportedBy': process.env.REACT_APP_MIDDLEWARE_URL + 'services/lafabrique',
+      'pair:hasTopic': process.env.REACT_APP_MIDDLEWARE_URL + 'themes/oasis'
     }
   }
 };
