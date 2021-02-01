@@ -16,9 +16,9 @@ const SubscriberList = props => (
         ]}
       />
       <DateField source="published" />
-      <UriArrayField reference="Theme" source="pair:hasInterest">
+      <UriArrayField reference="Theme" source="pair:hasTopic">
         <SingleFieldList>
-          <ChipField source="pair:preferedLabel" />
+          <ChipField source="pair:label" />
         </SingleFieldList>
       </UriArrayField>
       <SelectField

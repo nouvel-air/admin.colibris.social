@@ -11,6 +11,7 @@ export default {
     }
   },
   dataModel: {
+    types: ['as:Service'],
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'services',
     slugField: 'pair:label'
   },

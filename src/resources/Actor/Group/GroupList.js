@@ -1,9 +1,8 @@
 import React from 'react';
 import { List, Datagrid, TextField, ShowButton } from 'react-admin';
-import SearchFilter from '../../../components/SearchFilter';
 
 const GroupList = props => (
-  <List title="Organisations" perPage={25} filters={<SearchFilter />} {...props}>
+  <List title="Organisations" perPage={25} {...props}>
     <Datagrid rowClick="show">
       <TextField source="name" />
       <TextField source="preferredUsername" />

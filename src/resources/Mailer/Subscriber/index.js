@@ -21,7 +21,7 @@ export default {
         'location.name': 'Localisation',
         'location.radius': 'Distance',
         'published': 'Inscription',
-        'pair:hasInterest': 'Intérêts',
+        'pair:hasTopic': 'Intérêts',
         'semapps:mailFrequency': 'Fréquence désirée'
       }
     }
