@@ -1,54 +1,23 @@
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
-import polyglotI18nProvider from 'ra-i18n-polyglot';
-import frenchMessages from 'ra-language-french';
-import { dataProvider, httpClient } from '@semapps/semantic-data-provider';
+import { Layout } from '@semapps/archipelago-layout';
 
-import action from './resources/Action';
-import actor from './resources/Actor';
-import device from './resources/Device';
-import hostingService from './resources/HostingService';
-import note from './resources/Note';
-import notification from './resources/Notification';
-import project from './resources/Project';
-import subscriber from './resources/Subscriber';
-import theme from './resources/Theme';
-
-import ontologies from './config/ontologies';
-import resources from './config/resources';
-import ColibrisLayout from './components/ColibrisLayout';
-import colibrisTheme from './theme';
+import i18nProvider from './config/i18nProvider';
+import dataProvider from './config/dataProvider';
+import theme from './config/theme';
+import * as resources from './resources';
 
 function App() {
-  const dataProviderConfig = {
-    sparqlEndpoint: process.env.REACT_APP_MIDDLEWARE_URL + 'sparql',
-    httpClient,
-    resources,
-    ontologies,
-    jsonContext: process.env.REACT_APP_MIDDLEWARE_URL + 'context.json',
-    uploadsContainerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'files'
-  };
-
   return (
     <Admin
-      dataProvider={dataProvider(dataProviderConfig)}
-      i18nProvider={polyglotI18nProvider(() => frenchMessages)}
-      theme={colibrisTheme}
-      layout={ColibrisLayout}
+      dataProvider={dataProvider}
+      i18nProvider={i18nProvider}
+      theme={theme}
+      layout={Layout}
     >
-      <Resource name="Actor" {...actor} />
-      <Resource name="Action" {...action} />
-      <Resource name="Subscriber" {...subscriber} />
-      <Resource name="Project" {...project} />
-      <Resource name="HostingService" {...hostingService} />
-      <Resource name="Note" {...note} />
-      <Resource name="Theme" {...theme} />
-      <Resource name="Device" {...device} />
-      <Resource name="Notification" {...notification} />
-      {/* Resources not displayed */}
-      <Resource name="Tag" />
-      <Resource name="Oasis" />
-      <Resource name="HostingServiceType" />
+      {Object.entries(resources).map(([key, resource]) => (
+        <Resource key={key} name={key} {...resource.config} />
+      ))}
     </Admin>
   );
 }

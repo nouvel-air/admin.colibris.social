@@ -11,14 +11,14 @@ const NoteTitle = ({ record }) => {
 const NoteEdit = props => (
   <Edit title={<NoteTitle />} {...props}>
     <SimpleForm>
-      <TextInput source="name" label="Nom" fullWidth />
-      <MarkdownInput source="content" label="Description" fullWidth />
-      <UriArrayInput label="Auteur" reference="Project" source="attributedTo">
-        <AutocompleteArrayInput optionText={record => (record ? record['pair:label'] : 'Label manquant')} fullWidth />
+      <TextInput source="name" fullWidth />
+      <MarkdownInput source="content" fullWidth />
+      <UriArrayInput reference="Project" source="attributedTo">
+        <AutocompleteArrayInput optionText="pair:label" fullWidth />
       </UriArrayInput>
-      <TextInput source="image" label="Image" fullWidth />
-      <DateTimeInput source="published" label="Publié le" fullWidth />
-      <DateTimeInput source="updated" label="Mis à jour le" fullWidth />
+      <TextInput source="image" fullWidth />
+      <DateTimeInput source="published" fullWidth />
+      <DateTimeInput source="updated" fullWidth />
     </SimpleForm>
   </Edit>
 );
