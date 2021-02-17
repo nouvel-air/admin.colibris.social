@@ -17,6 +17,7 @@ export default {
   dataModel: {
     types: ['pair:Project'],
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'projects',
+    dereference: ['as:location/schema:address'],
     slugField: 'pair:label'
   },
   translations: {

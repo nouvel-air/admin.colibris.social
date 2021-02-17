@@ -3,15 +3,18 @@
   "version": "0.1.8",
   "private": true,
   "dependencies": {
-    "@semapps/archipelago-layout": "0.1.18",
-    "@semapps/react-admin": "0.1.18",
-    "@semapps/semantic-data-provider": "0.1.18",
+    "@semapps/archipelago-layout": "0.1.19",
+    "@semapps/geo-components": "0.1.19",
+    "@semapps/react-admin": "0.1.19",
+    "@semapps/semantic-data-provider": "0.1.19",
     "jwt-decode": "^2.2.0",
     "ra-input-markdown": "^1.1.5",
     "ra-language-french": "3.11.0",
     "react": "^16.13.1",
     "react-admin": "3.11.0",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "leaflet": "^1.7.1",
+    "leaflet.markercluster": "^1.4.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
