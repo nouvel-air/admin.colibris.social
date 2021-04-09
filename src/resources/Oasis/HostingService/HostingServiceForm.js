@@ -10,7 +10,7 @@ import {
 } from 'react-admin';
 import { makeStyles } from '@material-ui/core/styles';
 import MarkdownInput from 'ra-input-markdown';
-import { ImageField, UriArrayInput } from '@semapps/semantic-data-provider';
+import { ImageField, ReferenceArrayInput } from '@semapps/semantic-data-provider';
 
 const useStyles = makeStyles({
   inlineBlock: { display: 'inline-flex', marginRight: '1rem' }
@@ -28,9 +28,9 @@ const HostingServiceForm = props => {
       <ImageInput source="oasis:image" accept="image/*" multiple>
         <ImageField source="src" />
       </ImageInput>
-      <UriArrayInput reference="HostingServiceType" source="pair:hasType">
+      <ReferenceArrayInput reference="Type" filter={{ a: 'oasis:HostingServiceType' }} source="pair:hasType">
         <AutocompleteArrayInput optionText="pair:label" fullWidth />
-      </UriArrayInput>
+      </ReferenceArrayInput>
       <NumberInput source="oasis:minCapacity" formClassName={classes.inlineBlock} />
       <NumberInput source="oasis:maxCapacity" formClassName={classes.inlineBlock} />
       <TextInput source="oasis:price" fullWidth />

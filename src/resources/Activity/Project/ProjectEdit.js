@@ -11,7 +11,7 @@ import {
 } from 'react-admin';
 import MarkdownInput from 'ra-input-markdown';
 import { copyValues, DateTimeInput } from '@semapps/react-admin';
-import { UriArrayInput } from '@semapps/semantic-data-provider';
+import { ReferenceArrayInput } from '@semapps/semantic-data-provider';
 import ProjectTitle from "./ProjectTitle";
 
 const decorators = [copyValues({ 'pair:label': 'name', 'pair:description': 'content', 'pair:aboutPage': 'url' })];
@@ -30,12 +30,12 @@ export const ProjectEdit = props => (
         <DateTimeInput source="updated" fullWidth />
       </FormTab>
       <FormTab label="Liens">
-        <UriArrayInput reference="Theme" source="pair:hasTopic">
+        <ReferenceArrayInput reference="Theme" source="pair:hasTopic">
           <AutocompleteArrayInput optionText="pair:label" fullWidth />
-        </UriArrayInput>
-        <UriArrayInput reference="Actor" source="pair:supportedBy">
+        </ReferenceArrayInput>
+        <ReferenceArrayInput reference="Actor" source="pair:supportedBy">
           <AutocompleteArrayInput optionText="pair:label" fullWidth />
-        </UriArrayInput>
+        </ReferenceArrayInput>
       </FormTab>
       <FormTab label="Localisation">
         <TextInput source="location[schema:address][schema:streetAddress]" fullWidth />
