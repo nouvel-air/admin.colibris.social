@@ -6,7 +6,7 @@ const ServiceList = props => (
     <Datagrid rowClick="show">
       <TextField source="name" />
       <TextField source="preferredUsername" />
-      {/*<EditButton />*/}
+      <EditButton />
     </Datagrid>
   </List>
 );
