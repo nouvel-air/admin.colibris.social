@@ -1,5 +1,5 @@
 import React from 'react';
-import { Create } from 'react-admin';
+import { Create } from '@semapps/archipelago-layout';
 import HostingServiceForm from './HostingServiceForm';
 
 const HostingServiceCreate = props => (

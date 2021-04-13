@@ -21,7 +21,7 @@ const HostingServiceForm = props => {
   return (
     <SimpleForm initialValues={{ 'oasis:minCapacity': 1 }} {...props}>
       <TextInput source="pair:label" fullWidth />
-      <ReferenceInput reference="Oasis" source="pair:offeredBy" fullWidth perPage={250}>
+      <ReferenceInput reference="Project" filter={{ 'pair:hasTopic': process.env.REACT_APP_MIDDLEWARE_URL + 'themes/oasis' }} source="pair:offeredBy" fullWidth perPage={250}>
         <AutocompleteInput optionText="pair:label" fullWidth />
       </ReferenceInput>
       <MarkdownInput multiline source="pair:description" fullWidth />

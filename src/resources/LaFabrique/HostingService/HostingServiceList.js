@@ -9,7 +9,7 @@ export const HostingServiceList = props => (
       <ReferenceField source="pair:offeredBy" reference="Project">
         <TextField source="pair:label" />
       </ReferenceField>
-      <UriArrayField reference="HostingServiceType" source="pair:hasType">
+      <UriArrayField reference="Type" source="pair:hasType">
         <SingleFieldList>
           <ChipField source="pair:label" />
         </SingleFieldList>

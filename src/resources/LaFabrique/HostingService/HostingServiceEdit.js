@@ -1,5 +1,5 @@
 import React from 'react';
-import { Edit } from 'react-admin';
+import { Edit } from '@semapps/archipelago-layout';
 import HostingServiceForm from './HostingServiceForm';
 
 const HostingServiceTitle = ({ record }) => {

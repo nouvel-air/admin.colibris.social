@@ -31,7 +31,7 @@ const ProjectList = props => (
           <Datagrid rowClick="show">
             <TextField source="pair:label" />
             <ShowButton basePath="/Project" />
-            <EditButton basePath="/Project" />
+            {/*<EditButton basePath="/Project" />*/}
           </Datagrid>
       }
     }}

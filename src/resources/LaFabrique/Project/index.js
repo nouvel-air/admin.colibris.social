@@ -1,13 +1,13 @@
 import ProjectList from './ProjectList';
 // import ProjectEdit from './ProjectEdit';
-// import ProjectShow from './ProjectShow';
+import ProjectShow from './ProjectShow';
 import FireplaceIcon from '@material-ui/icons/Fireplace';
 
 export default {
   config: {
     list: ProjectList,
     // edit: ProjectEdit,
-    // show: ProjectShow,
+    show: ProjectShow,
     icon: FireplaceIcon,
     options: {
       label: 'Projets',
