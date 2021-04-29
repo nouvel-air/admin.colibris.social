@@ -11,7 +11,24 @@ export default {
     }
   },
   dataModel: {
-    types: ['pair:GroupType', 'oasis:HostingServiceType'],
+    types: [
+      'pair:ActivityType',
+      'pair:AgentType',
+      'pair:ConceptType',
+      'pair:DocumentType',
+      'pair:EventType',
+      'pair:FolderType',
+      'pair:GroupType',
+      'pair:IdeaType',
+      'pair:ObjectType',
+      'pair:OrganizationType',
+      'pair:PlaceType',
+      'pair:ProjectType',
+      'pair:ResourceType',
+      'pair:SubjectType',
+      'pair:TaskType',
+      'oasis:HostingServiceType'
+    ],
     containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'types',
     slugField: 'pair:label'
   },
