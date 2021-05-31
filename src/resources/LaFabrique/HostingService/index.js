@@ -16,7 +16,7 @@ export default {
   },
   dataModel: {
     types: ['oasis:HostingService'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'hosting-services'
+    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'lafabrique/hosting-services'
   },
   translations: {
     fr: {
