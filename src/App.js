@@ -10,6 +10,7 @@ import * as resources from './resources';
 function App() {
   return (
     <Admin
+      title="Colibris"
       dataProvider={dataProvider}
       i18nProvider={i18nProvider}
       theme={theme}

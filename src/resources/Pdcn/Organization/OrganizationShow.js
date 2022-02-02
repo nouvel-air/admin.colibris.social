@@ -3,30 +3,26 @@ import {
   TextField,
   SimpleShowLayout,
   UrlField,
-  RichTextField,
-  ImageField
+  RichTextField
 } from 'react-admin';
-import {SeparatedListField, Show, SimpleList} from '@semapps/archipelago-layout';
-import ProjectTitle from './ProjectTitle';
-import {ReferenceArrayField} from "@semapps/semantic-data-provider";
+import { Show, SeparatedListField } from '@semapps/archipelago-layout';
+import { ReferenceArrayField } from "@semapps/semantic-data-provider";
+import OrganizationTitle from './OrganizationTitle';
 
-const ProjectShow = props => (
-  <Show title={<ProjectTitle />} {...props}>
+const OrganizationShow = props => (
+  <Show title={<OrganizationTitle />} {...props}>
     <SimpleShowLayout>
       <TextField source="pair:label" />
       <RichTextField source="pair:description" />
       <UrlField source="pair:aboutPage" />
-      <ImageField source="pair:depictedBy" />
+      <UrlField source="pair:webPage" />
       <ReferenceArrayField source="pair:hasTopic" reference="Theme">
         <SeparatedListField linkType={false}>
           <TextField source="pair:label" />
         </SeparatedListField>
       </ReferenceArrayField>
-      <ReferenceArrayField source="pair:needs" reference="Need">
-        <SimpleList primaryText="pair:label" />
-      </ReferenceArrayField>
     </SimpleShowLayout>
   </Show>
 );
 
-export default ProjectShow;
+export default OrganizationShow;

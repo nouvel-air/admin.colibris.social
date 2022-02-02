@@ -11,9 +11,7 @@ export default {
     }
   },
   dataModel: {
-    types: ['pair:ProjectStatus'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'status',
-    slugField: 'pair:label'
+    types: ['pair:ProjectStatus']
   },
   translations: {
     fr: {

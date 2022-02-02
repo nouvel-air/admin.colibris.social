@@ -9,7 +9,7 @@ import {
   ImageInput
 } from 'react-admin';
 import { makeStyles } from '@material-ui/core/styles';
-import MarkdownInput from 'ra-input-markdown';
+import { MarkdownInput } from '@semapps/markdown-components';
 import { ImageField, ReferenceArrayInput } from '@semapps/semantic-data-provider';
 
 const useStyles = makeStyles({

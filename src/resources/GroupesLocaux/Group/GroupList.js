@@ -25,13 +25,13 @@ const GroupList = props => (
       list: {
         label: 'Liste',
         icon: ListIcon,
-        sort: { field: 'pair:label', order: 'DESC' },
+        sort: { field: 'pair:label', order: 'ASC' },
         perPage: 25,
         list:
           <Datagrid rowClick="show">
             <TextField source="name" />
             <TextField source="preferredUsername" />
-            {/*<ShowButton />*/}
+            <ShowButton />
           </Datagrid>
       }
     }}

@@ -28,9 +28,7 @@ export default {
       'pair:SubjectType',
       'pair:TaskType',
       'oasis:HostingServiceType'
-    ],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'types',
-    slugField: 'pair:label'
+    ]
   },
   translations: {
     fr: {

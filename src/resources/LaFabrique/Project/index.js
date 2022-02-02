@@ -1,12 +1,10 @@
 import ProjectList from './ProjectList';
-// import ProjectEdit from './ProjectEdit';
 import ProjectShow from './ProjectShow';
 import FireplaceIcon from '@material-ui/icons/Fireplace';
 
 export default {
   config: {
     list: ProjectList,
-    // edit: ProjectEdit,
     show: ProjectShow,
     icon: FireplaceIcon,
     options: {
@@ -16,9 +14,9 @@ export default {
   },
   dataModel: {
     types: ['pair:Project'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'lafabrique/projects',
-    dereference: ['pair:hasLocation/pair:hasPostalAddress'],
-    slugField: 'pair:label'
+    list: {
+      dereference: ['pair:hasLocation/pair:hasPostalAddress'],
+    }
   },
   translations: {
     fr: {

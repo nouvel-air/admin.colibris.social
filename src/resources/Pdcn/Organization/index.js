@@ -1,9 +1,11 @@
 import OrganizationList from './OrganizationList';
+import OrganizationShow from "./OrganizationShow";
 import HomeIcon from '@material-ui/icons/Home';
 
 export default {
   config: {
     list: OrganizationList,
+    show: OrganizationShow,
     icon: HomeIcon,
     options: {
       label: 'Organisations',
@@ -12,16 +14,19 @@ export default {
   },
   dataModel: {
     types: ['pair:Organization'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'organizations',
-    dereference: ['pair:hasLocation/pair:hasPostalAddress'],
-    slugField: 'pair:label'
+    list: {
+      dereference: ['pair:hasLocation/pair:hasPostalAddress']
+    }
   },
   translations: {
     fr: {
       name: 'Organisation |||| Organisations',
       fields: {
-        'name': 'Nom',
-        'preferredUsername': 'Username'
+        'pair:label': 'Nom',
+        'pair:description': 'Description',
+        'pair:aboutPage': 'Page originale',
+        'pair:webPage': 'Site web',
+        'pair:hasTopic': 'Thématiques'
       }
     }
   }
