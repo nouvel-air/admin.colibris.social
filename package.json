@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@semapps/archipelago-layout": "^0.4.0-alpha.7",
+    "@semapps/date-components": "^0.4.0-alpha.7",
     "@semapps/geo-components": "^0.4.0-alpha.7",
     "@semapps/markdown-components": "^0.4.0-alpha.7",
     "@semapps/semantic-data-provider": "^0.4.0-alpha.7",

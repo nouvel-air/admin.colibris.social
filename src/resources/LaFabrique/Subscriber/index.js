@@ -11,7 +11,10 @@ export default {
     }
   },
   dataModel: {
-    containerUri: process.env.REACT_APP_MAILER_URL + 'actors'
+    types: ['as:Person'],
+    list: {
+      fetchContainer: true
+    }
   },
   translations: {
     fr: {

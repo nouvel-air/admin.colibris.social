@@ -17,7 +17,8 @@ export default {
     list: {
       containers: {
         colibris: ['/lemouvement/events']
-      }
+      },
+      dereference: ['pair:hasLocation/pair:hasPostalAddress'],
     }
   },
   translations: {
@@ -28,7 +29,7 @@ export default {
         'pair:comment': 'Résumé',
         'pair:description': 'Contenu',
         'pair:depictedBy': 'Image',
-        'pair:webPage': 'Page de la formation',
+        'pair:webPage': 'Site web',
         'pair:hasTopic': 'Thématiques',
         'pair:startDate': 'Date de début',
         'pair:endDate': 'Date de fin'

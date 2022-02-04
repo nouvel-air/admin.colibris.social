@@ -1,7 +1,7 @@
 // Colibris
 export { default as Service } from './Colibris/Service';
 export { default as Event } from './Colibris/Event';
-export { default as Person } from './Colibris/Person';
+// export { default as Person } from './Colibris/Person';
 export { default as Theme } from './Colibris/Theme';
 export { default as Status } from './Colibris/Status';
 export { default as Type } from './Colibris/Type';

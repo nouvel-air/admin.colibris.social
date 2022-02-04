@@ -31,7 +31,7 @@ const dataServers = {
     sparqlEndpoint: process.env.REACT_APP_MAILER_URL + 'sparql',
     containers: {
       mailer: {
-
+        'as:Person': ['/actors']
       },
     },
   },

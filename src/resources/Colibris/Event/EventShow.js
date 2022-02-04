@@ -15,9 +15,9 @@ const EventShow = props => (
   <Show title={<EventTitle />} {...props}>
     <SimpleShowLayout>
       <TextField source="pair:label" />
-      <DateField source="pair:startDate" />
-      <DateField source="pair:endDate" />
-      <RichTextField source="pair:comment" />
+      <DateField source="pair:startDate" showTime />
+      <DateField source="pair:endDate" showTime />
+      <RichTextField source="pair:description" />
       <UrlField source="pair:webPage" />
       <ImageField source="pair:depictedBy" />
       <ReferenceArrayField source="pair:hasTopic" reference="Theme">
