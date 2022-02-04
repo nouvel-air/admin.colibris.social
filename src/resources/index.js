@@ -11,6 +11,10 @@ export { default as Colibris } from './Colibris';
 export { default as Group } from './GroupesLocaux/Group';
 export { default as GroupesLocaux } from './GroupesLocaux';
 
+// La Boutique
+export { default as Product } from './LaBoutique/Product';
+export { default as LaBoutique } from './LaBoutique';
+
 // La Fabrique
 export { default as Project } from './LaFabrique/Project';
 export { default as Need } from './LaFabrique/Need';

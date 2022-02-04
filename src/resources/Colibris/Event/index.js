@@ -8,7 +8,7 @@ export default {
     show: EventShow,
     icon: EventIcon,
     options: {
-      label: 'Evénements',
+      label: 'Événements',
       parent: 'Colibris'
     }
   },
@@ -23,7 +23,7 @@ export default {
   },
   translations: {
     fr: {
-      name: 'Evénement |||| Evénements',
+      name: 'Événement |||| Événements',
       fields: {
         'pair:label': 'Nom',
         'pair:comment': 'Résumé',
