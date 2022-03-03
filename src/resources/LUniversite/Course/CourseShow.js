@@ -20,8 +20,8 @@ const CourseShow = props => (
       <RichTextField source="pair:comment" />
       <UrlField source="pair:webPage" />
       <ImageField source="pair:depictedBy" />
-      <ReferenceArrayField source="pair:hasTopic" reference="Theme">
-        <SeparatedListField link={false}>
+      <ReferenceArrayField source="pair:hasTopic" reference="Theme" linkType={false}>
+        <SeparatedListField link="show">
           <TextField source="pair:label" />
         </SeparatedListField>
       </ReferenceArrayField>

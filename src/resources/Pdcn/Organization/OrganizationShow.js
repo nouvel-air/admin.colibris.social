@@ -17,7 +17,7 @@ const OrganizationShow = props => (
       <UrlField source="pair:aboutPage" />
       <UrlField source="pair:webPage" />
       <ReferenceArrayField source="pair:hasTopic" reference="Theme">
-        <SeparatedListField linkType={false}>
+        <SeparatedListField link="show">
           <TextField source="pair:label" />
         </SeparatedListField>
       </ReferenceArrayField>

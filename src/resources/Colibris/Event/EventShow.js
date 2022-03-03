@@ -21,7 +21,7 @@ const EventShow = props => (
       <UrlField source="pair:webPage" />
       <ImageField source="pair:depictedBy" />
       <ReferenceArrayField source="pair:hasTopic" reference="Theme">
-        <SeparatedListField link={false}>
+        <SeparatedListField link="show">
           <TextField source="pair:label" />
         </SeparatedListField>
       </ReferenceArrayField>

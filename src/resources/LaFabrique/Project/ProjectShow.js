@@ -18,7 +18,7 @@ const ProjectShow = props => (
       <UrlField source="pair:aboutPage" />
       <ImageField source="pair:depictedBy" />
       <ReferenceArrayField source="pair:hasTopic" reference="Theme">
-        <SeparatedListField linkType={false}>
+        <SeparatedListField link="show">
           <TextField source="pair:label" />
         </SeparatedListField>
       </ReferenceArrayField>
