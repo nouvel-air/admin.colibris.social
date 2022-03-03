@@ -7,7 +7,7 @@ import {
   SelectField
 } from 'react-admin';
 import { Show } from '@semapps/archipelago-layout';
-import { ReferenceField} from "@semapps/semantic-data-provider";
+import { ReferenceField } from "@semapps/semantic-data-provider";
 import NeedTitle from './NeedTitle';
 
 const NeedShow = props => (
@@ -21,7 +21,7 @@ const NeedShow = props => (
         { id: 'pair:AtomBasedResource', name: 'Matériel' }
       ]} />
       <UrlField source="pair:webPage" />
-      <ReferenceField source="pair:neededBy" reference="Project">
+      <ReferenceField source="pair:neededBy" reference="Project" linkType="show">
         <TextField source="pair:label" />
       </ReferenceField>
     </SimpleShowLayout>

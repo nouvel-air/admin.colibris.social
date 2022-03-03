@@ -23,7 +23,7 @@ const ProjectShow = props => (
         </SeparatedListField>
       </ReferenceArrayField>
       <ReferenceArrayField source="pair:needs" reference="Need">
-        <SimpleList primaryText={data => data && data?.['pair:label']} />
+        <SimpleList primaryText={data => data && data?.['pair:label']} linkType="show" />
       </ReferenceArrayField>
     </SimpleShowLayout>
   </Show>
