@@ -19,7 +19,6 @@ export { default as LaBoutique } from './LaBoutique';
 export { default as Project } from './LaFabrique/Project';
 export { default as Need } from './LaFabrique/Need';
 export { default as HostingService } from './LaFabrique/HostingService';
-export { default as MailerSubscriber } from './LaFabrique/Subscriber';
 export { default as LaFabrique } from './LaFabrique';
 
 // Le Mag

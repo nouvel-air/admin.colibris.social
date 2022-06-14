@@ -24,17 +24,7 @@ const dataServers = {
         'oasis:HostingService': ['/lafabrique/hosting-services'],
       },
     },
-  },
-  mailer: {
-    name: 'mailer',
-    baseUrl: process.env.REACT_APP_MAILER_URL,
-    sparqlEndpoint: process.env.REACT_APP_MAILER_URL + 'sparql',
-    containers: {
-      mailer: {
-        'as:Person': ['/actors']
-      },
-    },
-  },
+  }
 };
 
 export default dataServers;
