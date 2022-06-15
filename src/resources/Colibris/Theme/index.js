@@ -1,9 +1,11 @@
 import ThemeList from './ThemeList';
+import ThemeShow from './ThemeShow';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 
 export default {
   config: {
     list: ThemeList,
+    show: ThemeShow,
     icon: LocalOfferIcon,
     options: {
       label: 'Thèmes',
@@ -11,9 +13,7 @@ export default {
     }
   },
   dataModel: {
-    types: ['pair:Theme'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'themes',
-    slugField: 'pair:label'
+    types: ['pair:Theme']
   },
   translations: {
     fr: {

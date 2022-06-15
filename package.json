@@ -3,23 +3,21 @@
   "version": "0.1.8",
   "private": true,
   "dependencies": {
-    "@semapps/archipelago-layout": "0.1.29",
-    "@semapps/geo-components": "0.1.29",
-    "@semapps/react-admin": "0.1.29",
-    "@semapps/semantic-data-provider": "0.1.29",
-    "jwt-decode": "^2.2.0",
-    "ra-input-markdown": "^1.1.5",
-    "ra-language-french": "3.13.5",
+    "@semapps/archipelago-layout": "^0.4.0-alpha.8",
+    "@semapps/date-components": "^0.4.0-alpha.8",
+    "@semapps/geo-components": "^0.4.0-alpha.8",
+    "@semapps/markdown-components": "^0.4.0-alpha.8",
+    "@semapps/semantic-data-provider": "^0.4.0-alpha.8",
+    "ra-language-french": "3.17.0",
     "react": "^16.13.1",
-    "react-admin": "^3.13.5",
-    "react-dom": "^16.13.1",
-    "leaflet": "^1.7.1",
-    "leaflet.markercluster": "^1.4.1"
+    "react-admin": "^3.17.0",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "prettier": "^2.3.2",
     "react-scripts": "3.4.0"
   },
   "scripts": {
@@ -27,21 +25,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "link-all": "npm link @semapps/archipelago-layout && npm link @semapps/react-admin && npm link @semapps/semantic-data-provider"
+    "prettier": "prettier --single-quote --print-width 120 --write '**/*.js'",
+    "link-semapps-packages": "yarn link @semapps/activitypub-components @semapps/archipelago-layout @semapps/auth-provider @semapps/date-components @semapps/geo-components @semapps/markdown-components @semapps/semantic-data-provider"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
 }

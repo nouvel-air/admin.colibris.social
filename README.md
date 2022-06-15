@@ -2,13 +2,13 @@
 
 # admin.colibris.social
 
-React Admin backoffice for the [Colibris ActivityPub server](https://github.com/reconnexion/colibris.social)
+Backoffice for [Colibris SemApps Instance](https://github.com/reconnexion/colibris.social)
 
 ## Quick start
 
 ```bash
-npm install
-npm start
+yarn install
+yarn start
 ```
 
 ## Configurations

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Datagrid, TextField, EditButton, ShowButton } from 'react-admin';
+import { Datagrid, TextField, ShowButton } from 'react-admin';
 import { MultiViewsList } from '@semapps/archipelago-layout';
 import { MapList } from '@semapps/geo-components';
 import MapIcon from '@material-ui/icons/Map';
@@ -31,7 +31,6 @@ const ProjectList = props => (
           <Datagrid rowClick="show">
             <TextField source="pair:label" />
             <ShowButton basePath="/Project" />
-            {/*<EditButton basePath="/Project" />*/}
           </Datagrid>
       }
     }}

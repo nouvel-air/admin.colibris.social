@@ -1,9 +1,11 @@
 import GroupList from './GroupList';
+import GroupShow from './GroupShow';
 import GroupIcon from '@material-ui/icons/Group';
 
 export default {
   config: {
     list: GroupList,
+    show: GroupShow,
     icon: GroupIcon,
     options: {
       label: 'Groupes',
@@ -12,16 +14,17 @@ export default {
   },
   dataModel: {
     types: ['pair:Group'],
-    containerUri: process.env.REACT_APP_MIDDLEWARE_URL + 'groups',
-    dereference: ['pair:hasLocation/pair:hasPostalAddress'],
-    slugField: 'pair:label'
+    list: {
+      dereference: ['pair:hasLocation/pair:hasPostalAddress'],
+    }
   },
   translations: {
     fr: {
       name: 'Groupe |||| Groupes',
       fields: {
-        'name': 'Nom',
-        'preferredUsername': 'Username'
+        'pair:label': 'Nom',
+        'pair:e-mail': 'Adresse mail',
+        'pair:webPage': 'Site web'
       }
     }
   }
