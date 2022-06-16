@@ -6,6 +6,7 @@ import i18nProvider from './config/i18nProvider';
 import dataProvider from './config/dataProvider';
 import theme from './config/theme';
 import * as resources from './resources';
+import StatisticsPage from "./pages/StatisticsPage/StatisticsPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       i18nProvider={i18nProvider}
       theme={theme}
       layout={Layout}
+      dashboard={StatisticsPage}
     >
       {Object.entries(resources).map(([key, resource]) => (
         <Resource key={key} name={key} {...resource.config} />
