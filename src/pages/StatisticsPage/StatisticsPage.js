@@ -92,7 +92,7 @@ const StatisticsPage = () => {
             theme={VictoryTheme.material}
             activities={activitiesByTheme}
           />
-          <Typography variant="h5">Nouveautés par services</Typography>
+          <Typography variant="h5">Nouveautés par projets</Typography>
           <ActivitiesByServiceChart
             width={1200}
             height={550}
