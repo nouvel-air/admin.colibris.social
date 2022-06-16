@@ -13,6 +13,7 @@
     "react": "^16.13.1",
     "react-admin": "^3.17.0",
     "react-dom": "^16.13.1",
+    "speakingurl": "^14.0.1",
     "victory": "^36.5.0"
   },
   "devDependencies": {

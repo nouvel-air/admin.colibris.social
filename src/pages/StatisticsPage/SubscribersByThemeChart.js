@@ -36,7 +36,7 @@ const themes = [
   "Travail"
 ];
 
-const ThemesChart = ({ subscriptions, ...rest }) => {
+const SubscribersByThemeChart = ({ subscriptions, ...rest }) => {
   const data = useMemo(() => {
     let data = subscriptions.filter(s => s.started);
     const startNum = subscriptions.length - data.length;
@@ -89,4 +89,4 @@ const ThemesChart = ({ subscriptions, ...rest }) => {
   )
 };
 
-export default ThemesChart;
+export default SubscribersByThemeChart;

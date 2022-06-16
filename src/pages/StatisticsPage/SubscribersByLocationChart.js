@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const GeoChart = ({ subscriptions }) => {
+const SubscribersByLocationChart = ({ subscriptions }) => {
   const data = useMemo(() => {
     return subscriptions.reduce((acc, s) => {
       if( s.zipCode ) {
@@ -113,4 +113,4 @@ const GeoChart = ({ subscriptions }) => {
   )
 };
 
-export default GeoChart;
+export default SubscribersByLocationChart;
