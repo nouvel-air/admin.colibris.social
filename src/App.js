@@ -11,7 +11,7 @@ import StatisticsPage from "./pages/StatisticsPage/StatisticsPage";
 function App() {
   return (
     <Admin
-      title="Colibris"
+      title="colibris.social"
       dataProvider={dataProvider}
       i18nProvider={i18nProvider}
       theme={theme}
