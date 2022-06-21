@@ -49,7 +49,7 @@ const NewSubscribersChart = ({ subscriptions, ...rest }) => {
       <VictoryLine
         labelComponent={<VictoryTooltip />}
         style={{
-          data: { stroke: "#bdc900" }
+          data: { stroke: "#b9cd00" }
         }}
         data={data}
         // animate={{

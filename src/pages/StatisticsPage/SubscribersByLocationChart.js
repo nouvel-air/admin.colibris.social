@@ -9,7 +9,7 @@ const heatMap = {
   '#c96b00': 10,
   '#c99000': 5,
   '#c9b800': 3,
-  '#bdc900': 0,
+  '#b9cd00': 0,
 };
 
 const useStyles = makeStyles((theme) => ({
