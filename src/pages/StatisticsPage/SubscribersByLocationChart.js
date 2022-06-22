@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
       stroke: '#fff',
       strokeWidth: 0.5,
       '& path': {
-        fill: '#bdc900',
+        fill: '#b9cd00',
         cursor: 'pointer',
         outline: 'none',
         '&:hover': {
