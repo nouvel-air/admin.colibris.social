@@ -13,7 +13,7 @@ export default {
     }
   },
   dataModel: {
-    types: ['as:Service']
+    types: ['Service']
   },
   translations: {
     fr: {

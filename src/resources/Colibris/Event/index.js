@@ -17,8 +17,7 @@ export default {
     list: {
       containers: {
         colibris: ['/lemouvement/events']
-      },
-      dereference: ['pair:hasLocation/pair:hasPostalAddress'],
+      }
     }
   },
   translations: {

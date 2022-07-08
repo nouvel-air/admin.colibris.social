@@ -14,9 +14,6 @@ export default {
   },
   dataModel: {
     types: ['pair:Project'],
-    list: {
-      dereference: ['pair:hasLocation/pair:hasPostalAddress'],
-    }
   },
   translations: {
     fr: {

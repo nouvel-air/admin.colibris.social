@@ -13,10 +13,7 @@ export default {
     }
   },
   dataModel: {
-    types: ['pair:Organization'],
-    list: {
-      dereference: ['pair:hasLocation/pair:hasPostalAddress']
-    }
+    types: ['pair:Organization']
   },
   translations: {
     fr: {

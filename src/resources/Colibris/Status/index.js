@@ -11,7 +11,7 @@ export default {
     }
   },
   dataModel: {
-    types: ['pair:ProjectStatus']
+    types: ['pair:ProjectStatus', 'tutor:RegistrationStatus', 'tutor:CourseStatus']
   },
   translations: {
     fr: {
